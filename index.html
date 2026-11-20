@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookTrack</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>BookTrack</h1>
+      <p>Safnið þitt af bókum</p>
+    </header>
+
+    <nav>
+      <a href="#home">Forsíða</a>
+      <a href="#books">Bækurnar mínar</a>
+      <a href="#add">Bæta við bók</a>
+    </nav>
+
+    <main>
+      <section id="home">
+        <h2>Velkomin í BookTrack</h2>
+        <p>Haltu utan um bækurnar sem þú hefur lesið.</p>
+      </section>
+
+      <section id="books">
+        <h2>Bækurnar mínar</h2>
+        <input type="text" id="search" placeholder="Leita að bók..." />
+        <div id="book-list"></div>
+      </section>
+
+      <section id="add">
+        <h2>Bæta við bók</h2>
+
+        <form id="book-form">
+          <label for="title">Titill bókar</label>
+          <input type="text" id="title" required />
+
+          <label for="author">Höfundur</label>
+          <input type="text" id="author" required />
+
+          <label for="rating">Einkunn</label>
+            <select id="rating">
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3" selected>⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+
+          <button type="submit">Bæta við bók</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>BookTrack – Bókasafnið mitt</p>
+    </footer>
+  </body>
+</html>

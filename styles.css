@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+header {
+  padding: 35px 8%;
+  background: #1f2937;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #a78bfa;
+}
+
+header p {
+  color: #9ca3af;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  padding: 18px 8%;
+  background: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+nav a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+#home {
+  padding: 30px;
+  background: #1f2937;
+  border-radius: 14px;
+}
+
+#home p {
+  color: #9ca3af;
+}
+
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  padding: 22px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+}
+
+.book-card h3 {
+  color: #c4b5fd;
+}
+
+.book-card p {
+  color: #9ca3af;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 450px;
+  padding: 25px;
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #8b5cf6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7c3aed;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #1f2937;
+  color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 25px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    padding: 15px 25px;
+    gap: 15px;
+  }
+}
