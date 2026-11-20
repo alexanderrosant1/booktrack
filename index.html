@@ -28,6 +28,14 @@
       <section id="books">
         <h2>Bækurnar mínar</h2>
         <input type="text" id="search" placeholder="Leita að bók..." />
+        <label for="sort">Raða eftir:</label>
+
+        <select id="sort">
+            <option value="title">Titli (A–Ö)</option>
+            <option value="author">Höfundi (A–Ö)</option>
+            <option value="rating">Einkunn (hæsta fyrst)</option>
+        </select>
+
         <div id="book-list"></div>
       </section>
 

@@ -21,6 +21,7 @@ const books = savedBooks ? JSON.parse(savedBooks) : defaultBooks;
 
 const bookList = document.querySelector("#book-list");
 const searchInput = document.querySelector("#search");
+const sortInput = document.querySelector("#sort");
 const bookForm = document.querySelector("#book-form");
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
@@ -42,7 +43,17 @@ function displayBooks() {
     );
   });
 
-  filteredBooks.forEach((book) => {
+  const sortedBooks = [...filteredBooks];
+
+  if (sortInput.value === "title") {
+    sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sortInput.value === "author") {
+    sortedBooks.sort((a, b) => a.author.localeCompare(b.author));
+  } else if (sortInput.value === "rating") {
+    sortedBooks.sort((a, b) => Number(b.rating) - Number(a.rating));
+  }
+
+  sortedBooks.forEach((book) => {
     const card = document.createElement("article");
     card.classList.add("book-card");
 
@@ -80,5 +91,6 @@ bookForm.addEventListener("submit", (event) => {
 });
 
 searchInput.addEventListener("input", displayBooks);
+sortInput.addEventListener("change", displayBooks);
 
 displayBooks();
